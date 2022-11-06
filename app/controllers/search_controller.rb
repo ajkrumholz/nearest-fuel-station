@@ -1,5 +1,5 @@
 class SearchController < ApplicationController
   def index
-    require 'pry'; binding.pry
+    @station = StationFacade.get_nearest(params[:location])
   end
 end
